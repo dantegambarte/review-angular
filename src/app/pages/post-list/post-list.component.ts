@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { IPosts } from 'src/models/IPosts';
-import { PostsService } from '../services/posts.service';
+import { PostsService } from '../../services/posts.service';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 
 @Component({
@@ -10,10 +10,11 @@ import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 })
 export class PostListComponent implements OnInit {
   posts!: IPosts[];
+  id!: number;
+  public page!: number;
   constructor(private postsService: PostsService) {
   }
 
-  id!: number;
   ngOnInit(): void {
     this.postsService.getPosts().subscribe( posts => {
       this.posts = posts;

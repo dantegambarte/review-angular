@@ -1,0 +1,54 @@
+/* table, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+} */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+h1 {
+  font-size: 3rem;
+  font-family: "Lucida Sans", sans-serif;
+  margin-bottom: 0.5rem;
+}
+
+.content-table {
+  display: flex;
+  flex-direction: column;
+}
+
+tbody > tr > td:nth-child(1) {
+  padding: 0 1rem;
+  text-align: center;
+  width: 5rem;
+}
+
+tbody > tr > td:nth-child(2) {
+  padding-left: 1rem;
+}
+
+tbody > tr > td:nth-child(3) {
+  text-align: center;
+  color: cornflowerblue;
+  text-decoration: underline;
+  width: 7rem;
+}
+
+tbody > tr > td {
+  height: 3rem;
+}
+
+.pager {
+  display: flex;
+  justify-content: space-around;
+}
+
+@media (max-width: 1023px) {
+  tbody > tr > td:nth-child(2) {
+    padding-left: 0.5rem;
+  }
+
+  tbody > tr > td {
+    height: 4rem;
+  }
+}

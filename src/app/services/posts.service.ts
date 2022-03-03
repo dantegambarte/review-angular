@@ -14,7 +14,7 @@ export class PostsService {
   getPosts(): Observable<IPosts[]> {
     return this.http.get<IPosts[]>(this.api);
   }
-  getPost(id: number): Observable<IPosts[]> {
-    return this.http.get<IPosts[]>(`${this.api}/${id}`);
+  getPost(id: number): Observable<IPosts> {
+    return this.http.get<IPosts>(`${this.api}/${id}`);
   }
 }
