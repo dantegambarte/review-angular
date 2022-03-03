@@ -1,1 +1,22 @@
-<p>post-list works!</p>
+<div>
+  <h1>List post</h1>
+  <div class="content-table">
+    <table class="border-collapse border border-slate-500">
+      <thead>
+        <tr>
+          <th class="border border-slate-600">ID</th>
+          <th class="border border-slate-600">POST</th>
+          <th class="border border-slate-600">ACTIONS</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let post of posts; let i = index">
+          <td class="border border-slate-700">{{ i }}</td>
+          <td class="border border-slate-700">{{ post.title }}</td>
+          <td class="border border-slate-700"><a href="#" [routerLink]="['/post', post.id]">Ver</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
