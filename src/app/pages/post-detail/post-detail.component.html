@@ -1,5 +1,12 @@
 <div>
-    <h1>Detail post: {{post?.id}}</h1>
+  <div class="title-btn">
+    <h1>Detail post: {{ post?.id }}</h1>
+    <button class="btn btn-outline-light bg-info col-1" [routerLink]="['/posts']">
+      Volver
+    </button>
+  </div>
+  <div>
     <h2>Body</h2>
-    <p>{{post?.body}}</p>
+    <p>{{ post?.body }}</p>
+  </div>
 </div>
