@@ -37,3 +37,9 @@
 .button-nuevo-comentario > button{
   width: 10rem;
 }
+
+.new-comment-and-btn{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}

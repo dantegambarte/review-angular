@@ -3,12 +3,24 @@
   <hr />
   <div *ngFor="let comment of comments; let i = index">
     <div *ngIf="comment.postId == idPost">
-      <p>Nombre: {{ comment.name }}</p>
-      <p>Comentario: {{ comment.body }}</p>
+      <div> 
+        <p>Nombre: {{ comment.name }}</p>
+        <p>Comentario: {{ comment.body }}</p>
+      </div>
       <br />
       <hr />
-      <button (click)="eliminarComentario(i)" *ngIf="i>500">Eliminar</button>
     </div>
+  </div>
+  <div *ngFor="let newComment of newComments; let i = index">
+    <div *ngIf="newComment.postId == idPost" class="new-comment-and-btn">
+      <div>
+        <p>Nombre: {{ newComment.name }}</p>
+        <p>Comentario: {{ newComment.body }}</p>
+      </div>
+      <button class="btn" (click)="eliminarComentario(i)" *ngIf="newComments"><i class="fa-solid fa-trash-can"></i></button>
+    </div>
+    <br />
+    <hr />
   </div>
   <div class="button-emitir">
     <button class="btn btn-outline-dark bg-secondary col-1" (click)="emitir()">Emitir</button>
