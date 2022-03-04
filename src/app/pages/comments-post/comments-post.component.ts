@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { CommentsService } from 'src/app/services/comments.service';
 import { IComments } from 'src/models/IComments';
@@ -10,13 +10,13 @@ import { IComments } from 'src/models/IComments';
 })
 export class CommentsPostComponent implements OnInit {
   comments!: IComments[];
-  id!: number;
+  @Input() idPost!: number;
   constructor(private route: ActivatedRoute, private commentsService: CommentsService) {}
 
   ngOnInit() {
-    this.route.paramMap.subscribe((params: ParamMap) => {
-      this.id = parseInt(params.get('id')!);
-    });
+    // this.route.paramMap.subscribe((params: ParamMap) => {
+    //   this.idPost = parseInt(params.get('id')!);
+    // });
     this.commentsService.getComents().subscribe((comments) => {
       console.log(comments);
       this.comments = comments;
