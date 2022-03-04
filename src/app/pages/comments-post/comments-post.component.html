@@ -1,0 +1,11 @@
+<div class="content-comentarios">
+  <h3 class="title-comentarios mb-2">Comentarios</h3>
+  <hr>
+  <div *ngFor="let comment of comments; let i = index" >
+    <div *ngIf="comment.postId == id">
+      <p>Nombre: {{comment.name}}</p>
+      <p>Comentario: {{comment.body}}</p>
+      <br> <hr>
+    </div>
+  </div>
+</div>

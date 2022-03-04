@@ -11,6 +11,7 @@ import { PostsService } from '../../services/posts.service';
 export class PostDetailComponent implements OnInit {
   id!: number;
   post!: IPosts;
+  
   constructor(private route: ActivatedRoute, private postsService: PostsService) {}
 
   ngOnInit(): void {

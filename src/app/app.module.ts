@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { PostListComponent } from './pages/post-list/post-list.component';
 import { PostDetailComponent } from './pages/post-detail/post-detail.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { CommentsPostComponent } from './pages/comments-post/comments-post.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
     AppComponent,
     PostListComponent,
     PostDetailComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    CommentsPostComponent
   ],
   imports: [
     BrowserModule,
