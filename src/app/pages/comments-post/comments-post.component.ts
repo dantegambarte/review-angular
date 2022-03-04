@@ -59,8 +59,5 @@ export class CommentsPostComponent implements OnInit {
     if(localStorage.getItem(`Comentarios: ${this.idPost}`)){
       this.newComments = JSON.parse(localStorage.getItem(`Comentarios: ${this.idPost}`) || "[]");
     }
-    else{
-      console.log("ahora toy aki pero con error");
-    }
   }
 }
