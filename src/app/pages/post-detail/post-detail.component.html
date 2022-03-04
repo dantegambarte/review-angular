@@ -1,14 +1,17 @@
 <div>
   <div class="title-btn">
-    <h1>Detail post: {{ post?.id }}</h1>
-    <button class="btn btn-outline-light bg-info col-1" [routerLink]="['/posts']">
-      Volver
-    </button>
+    <div class="d-flex">
+      <h1>Detail post: {{ post.id }}</h1>
+      <button class="btn btn-outline-light bg-info btn-block" [routerLink]="['/posts']">
+        Volver
+      </button>
+    </div>
+    <p>{{str}}{{lastComment | date: 'longDate'}}</p>
   </div>
   <div>
     <h2>Body</h2>
-    <p>{{ post?.body }}</p>
+    <p>{{ post.body }}</p>
   </div>
 </div>
 
-<app-comments-post [idPost]="post.id"></app-comments-post>
+<app-comments-post [idPost]="post.id" (setLastComment)=getLastComment($event)></app-comments-post>

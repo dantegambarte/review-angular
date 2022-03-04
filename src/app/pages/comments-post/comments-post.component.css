@@ -14,3 +14,10 @@
   margin-top: 5rem;
   border: solid 1px black;
 }
+
+.button-emitir{
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-around;
+  height: 3rem;
+}
