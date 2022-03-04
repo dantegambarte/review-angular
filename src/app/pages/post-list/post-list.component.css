@@ -52,3 +52,11 @@ tbody > tr > td {
     height: 4rem;
   }
 }
+
+th:nth-child(1), th:nth-child(3){
+  text-align: center;
+}
+
+th:nth-child(2){
+  padding-left: 1rem;
+}
