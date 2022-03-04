@@ -11,8 +11,9 @@
 }
 
 .content-comentarios {
-  margin-top: 5rem;
+  margin-top: 2rem;
   border: solid 1px black;
+  margin: 0 6rem;
 }
 
 .button-emitir{
@@ -20,4 +21,19 @@
   display: flex;
   justify-content: space-around;
   height: 3rem;
+}
+
+.nuevo-comentario{
+  margin: 2rem;
+}
+
+.button-nuevo-comentario{
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem 0;
+  height: 3rem;
+}
+
+.button-nuevo-comentario > button{
+  width: 10rem;
 }
