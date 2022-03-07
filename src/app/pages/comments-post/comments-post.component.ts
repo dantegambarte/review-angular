@@ -15,7 +15,7 @@ export class CommentsPostComponent implements OnInit {
   newComments: IComments[] = [];
   @Input() idPost!: number;
   date: Date = new Date();
-  fecha: string = `${this.date.getFullYear()}, ${this.date.getMonth() + 1}, ${this.date.getDay() -1}`;
+  fecha: string = `${this.date.getFullYear()}, ${this.date.getMonth() + 1}, ${this.date.getDate()}`;
   @Output() setLastComment: EventEmitter<string> = new EventEmitter();
   
   public formComentario!: FormGroup;
